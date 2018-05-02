@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+}
+{%block content%}
+
+<div class="uk-card uk-card-default uk-width-1-1@m">
+
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+
+            </div>
+            <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom">{{profiles.user}}</h3>
+                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">{{profiles.bio}}</time></p>
+                <h3 class="uk-card-title uk-margin-remove-bottom">{{profiles.product.package}}</h3>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    <!-- <div class="uk-container">
+
+
+
+     <div class="uk-flex uk-float-left  uk-margin-medium-left uk-margin-medium-top  uk-margin-medium-right uk-margin-medium-bottom">
+
+         <div class="uk-card-large uk-card-default uk-card-body uk-animation-scale-up">
+    {%for item in my_images%}
+
+       <div class="uk-card-media-top">
+         {% if item.gallery_image %}
+           <img src="{{my_images.gallery_image.url}}"  alt="Image"width="300px"height="300px">
+           {% endif %}
+       </div>
+       <div class="uk-card-body">
+           <h3 class="uk-card-title">{{item.caption}}</h3>
+
+
+
+       </div>
+       {%endfor%}
+     </div> -->
+
+     {%for image in my_images%}
+
+
+     <div class="uk-container uk-float-left uk-margin-large-left uk-margin">
+
+
+        {% if image.gallery_image %}
+        <a href="{%url 'single_image' image.id%}">  <img src="{{image.gallery_image.url}}"  alt="Image"width="300px"height="300px"></a>
+          {% endif %}
+          </div>
+
+
+
+
+          {%endfor%}
+         {%endblock %}
