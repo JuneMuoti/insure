@@ -13,10 +13,8 @@ This is a web application that allows you to buy insurance online.
 ## User Stories
 
 * Sign in with the application to start using.
-* Set up a profile about you and a general location and my neighborhood name.
-* Find a list of different businesses in your neighborhood
-* Create Posts that will be visible to everyone in my neighborhood
-* view details of a single neighborhood
+* Set up a profile about you .
+* Find a list of different insurance covers.
 
 ## Usage
 ```
@@ -45,7 +43,7 @@ run python3.6 manage.py runserver to run app on local server
 
 * Django - The web framework used
 * Python - Language
-* UIkit- 
+* UIkit-
 * Postgresql-Database
 * Bootstrap4
 ## Authors
