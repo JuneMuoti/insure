@@ -9,7 +9,6 @@ This is a web application that allows you to buy insurance online.
 * Linux
 * Python 3.6 and up
 
-`$ pip install Hood-watch`
 ## User Stories
 
 * Sign in with the application to start using.
