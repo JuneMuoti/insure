@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from .models import Profile
+from .models import Profile,Product
 
-
+# view function for main page
 def index(request):
-    return render (request,'index.html')
+    product=Product.objects.all()
+    return render (request,'index.html',{"product":product})
 
-# Create your views here.
 
+# view function for a single user profile
 def profile(request,user_id):
 
     profiles= Profile.objects.get(id = user_id)
