@@ -14,9 +14,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-      </li>
+
       <li class="nav-item">
       </li>
       <li class="nav-item dropdown">
@@ -30,10 +28,19 @@
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
-      <li>
-                  <a href="{%url 'profile' user.id%}"uk-icon="icon: user"uk-tooltip="Profile"></a></li>
-                <li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+      </li>
+
+
     </ul>
 
+    <nav class="navbar navbar-left navbar-expand-lg navbar-light bg-light">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+                    <a href="{%url 'profile' user.id%}"uk-icon="icon: user"uk-tooltip="Profile"></a></li>
+
+              </ul>
+                  </nav>
   </div>
 </nav>
