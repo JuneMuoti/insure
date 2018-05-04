@@ -13,6 +13,7 @@ class Package(models.Model):
         verbose_name_plural = 'packages'
     def __str__(self):
         return self.name
+    # product as selected by the user
 class Product(models.Model):
     package = models.ForeignKey(Package,related_name='products')
     hospital=models.TextField(default=True)
@@ -21,11 +22,14 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    product_user=models.ForeignKey(User,default=True)
     class Meta:
         ordering = ('name',)
         index_together = (('id', 'slug'),)
         def __str__(self):
             return self.name
+
+        # user profile model
 class Profile(models.Model):
 
 
